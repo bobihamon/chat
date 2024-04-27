@@ -2,7 +2,8 @@ import http from 'http';
 import path from 'path';
 import fs from 'fs';
 import { Server } from 'socket.io';
-
+import database, {getMessages} from './database.js';
+console.log(getMessages())
 
 const __dirname = path.resolve();
 
