@@ -2,9 +2,12 @@ import http from 'http';
 import path from 'path';
 import fs from 'fs';
 import { Server } from 'socket.io';
-import database, {getMessages} from './database.js';
+import  {getMessages, addMessage} from './database.js';
 console.log(getMessages())
 
+await addMessage("hello",1)
+let m = await getMessages()
+console.log(m)
 const __dirname = path.resolve();
 
 const pathToIndex = path.join(__dirname, 'static', 'index.html');
@@ -49,7 +52,8 @@ io.on('connection', (socket) => {
         username = data
     })
     socket.on('new_message', (data) => {
-        io.emit("message", username + ": " + data)
+        io.emit("message", username + ": " + data) 
     })
 
 })
+
