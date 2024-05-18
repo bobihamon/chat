@@ -102,3 +102,22 @@ form{
     width: 60px;
     height: 30px;
 }
+
+.login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: blue;
+    width:400px;
+    margin:0 auto;
+    margin-top: 250px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.login input{
+    margin-top: 10px;
+    border:1 px solid black;
+    text-decoration: none;
+}
